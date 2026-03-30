@@ -1,4 +1,4 @@
-import React, { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { checkHealth } from "../api";
 import { AlertCircle, CheckCircle, Loader2 } from "lucide-react";
