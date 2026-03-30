@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# 🕵️‍♂️ DeepFake Detection Platform (CertiScan Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **DeepFake Detection Platform**! This is the frontend application built to provide a modern, fast, and intuitive user interface for detecting manipulated media (deepfakes).
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Modern & Responsive UI**: Built with Tailwind CSS and Framer Motion for a sleek, glassmorphic design and smooth animations.
+- **Media Upload**: Easy drag-and-drop file uploading using `react-dropzone`.
+- **Results & Analytics**: Beautiful data visualization using `recharts` to display deepfake probability scores and analysis results.
+- **Seamless Navigation**: Client-side routing with `react-router-dom` ensuring fast transitions across Home, Features, About, Upload, and Results pages.
+- **Global Layout**: Consistent navigation and theming across the entire application.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 18](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Bundler**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Routing**: [React Router v6](https://reactrouter.com/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── assets/         # Static assets like images and icons
+├── components/     # Reusable UI components (e.g., Layout)
+├── pages/          # Application routes/pages
+│   ├── Home.tsx      # Landing page
+│   ├── Features.tsx  # Platform features overview
+│   ├── About.tsx     # Information about the project/team
+│   ├── Upload.tsx    # Media upload handling
+│   └── Results.tsx   # Deepfake scan results and charts
+├── api.ts          # Axios configuration and API calls
+├── App.tsx         # Root component containing routing logic
+├── main.tsx        # Application entry point
+└── index.css       # Global CSS and Tailwind directives
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏁 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository** (or navigate to the project directory):
+   ```bash
+   cd CertiScan_Frontend
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser** and navigate to `http://localhost:5173`.
+
+## 📜 Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Starts the Vite development server.
+- `npm run build`: Compiles TypeScript and builds the app for production to the `dist` folder.
+- `npm run lint`: Runs ESLint to check for code quality and matching type rules.
+- `npm run preview`: Bootstraps a local web server to preview the production build.
+
+## 📄 License
+
+This project is licensed under the MIT License.
