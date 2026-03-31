@@ -29,7 +29,7 @@ export default function About() {
     {
       name: "Anushka Gahlowt",
       role: "Research & Testing",
-      desc: "Handle database storage, system integration, and project documentation.",
+      desc: "Handled System integration and project documentation.",
       img: anushkaImg,
     },
   ];
